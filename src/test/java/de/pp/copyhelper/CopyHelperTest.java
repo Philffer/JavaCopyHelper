@@ -24,6 +24,11 @@ public class CopyHelperTest {
         System.out.println("Starting tests in PairTest Class");
     }
 
+    @AfterClass
+    public static void testEndMessage() {
+        System.out.println("Ending tests in PairTest Class");
+    }
+
     @Before
     public void prepareData() {
 
@@ -51,11 +56,6 @@ public class CopyHelperTest {
 
     }
 
-    @AfterClass
-    public static void testEndMessage() {
-        System.out.println("Ending tests in PairTest Class");
-    }
-
     @Test
     public void shouldCopyValuesInterfaceTest() throws CopyHelperException {
         CopyHelper.copyData(Entity.class, Entity.class, e1, e2);
@@ -69,16 +69,16 @@ public class CopyHelperTest {
     public void shouldNotCopyValueWithNoCopyAnnoationInterfaceTest() throws CopyHelperException {
         CopyHelper.copyData(Entity.class, Entity.class, e1, e2);
 
-        Assert.assertNull( e2.getDoNotCopy());
+        Assert.assertNull(e2.getDoNotCopy());
     }
 
     @Test
     public void shouldCopyValuesToChildWithCastInterfaceTest() throws CopyHelperException {
         CopyHelper.copyData(Entity.class, Entity.class, e1, e4);
 
-        Assert.assertEquals(e1.getId(), ((Entity)e4).getId());
-        Assert.assertEquals(e1.getName(), ((Entity)e4).getName());
-        Assert.assertNull(((Entity)e4).getDoNotCopy());
+        Assert.assertEquals(e1.getId(), ((Entity) e4).getId());
+        Assert.assertEquals(e1.getName(), ((Entity) e4).getName());
+        Assert.assertNull(((Entity) e4).getDoNotCopy());
         Assert.assertNull(e4.getEntityChild2Specific());
     }
 

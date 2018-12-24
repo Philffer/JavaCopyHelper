@@ -15,13 +15,12 @@ import java.util.stream.Collectors;
 public class CopyHelper {
 
     /**
-     *
-     * @param sourceClass
-     * @param destinationClass
+     * @param sourceClass The class (Class or Interface) of the sourceClass
+     * @param destinationClass The class (Class or Interface) of the destinationClass
      * @param sourceObject
      * @param destinationObject
-     * @param <T>
-     * @param <U>
+     * @param <T> Generic Type of the sourceClass
+     * @param <U> Generic Type of the destinationClass
      * @throws CopyHelperException
      */
     public static <T, U> void copyData(Class<T> sourceClass, Class<U> destinationClass, T sourceObject, U destinationObject) throws CopyHelperException {
@@ -64,6 +63,7 @@ public class CopyHelper {
 
     /**
      * Method for finding {@link Method}s (getter, setter) for a given source- and destination class
+     *
      * @param sourceClass
      * @param destinationClass
      * @param <T>
@@ -103,15 +103,15 @@ public class CopyHelper {
     /**
      * Method for finding {@link PropertyDescriptor}s for a given class
      * @param clazz
+     * @param <T>
      * @return List of {@link PropertyDescriptor}
      * @throws IntrospectionException
      */
-    public static List<PropertyDescriptor> findPropertyDescriptorsByClass(Class<?> clazz) throws IntrospectionException {
+    public static <T> List<PropertyDescriptor> findPropertyDescriptorsByClass(Class<T> clazz) throws IntrospectionException {
         return Arrays.asList(Introspector.getBeanInfo(clazz).getPropertyDescriptors());
     }
 
     /**
-     *
      * @param propertyDescriptors
      * @return Map of Strings and {@link PropertyDescriptor}s
      */

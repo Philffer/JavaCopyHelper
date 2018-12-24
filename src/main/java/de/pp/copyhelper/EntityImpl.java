@@ -4,35 +4,35 @@ package de.pp.copyhelper;
  * @author Philipp Pfeiffer
  * Implementation of {@link Entity} Interface
  */
-public class EntityImpl implements Entity{
+public class EntityImpl implements Entity {
 
     private String name;
     private Long id;
     private String doNotCopy;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return this.name;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getId() {
         return this.id;
     }
 
-    public void setDoNotCopy(String doNotCopy) {
-        this.doNotCopy = doNotCopy;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @NoCopy
     public String getDoNotCopy() {
         return this.doNotCopy;
+    }
+
+    public void setDoNotCopy(String doNotCopy) {
+        this.doNotCopy = doNotCopy;
     }
 
     public String getDisplayValue() {

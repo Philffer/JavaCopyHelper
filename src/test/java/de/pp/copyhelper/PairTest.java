@@ -16,6 +16,11 @@ public class PairTest {
         System.out.println("Starting tests in PairTest Class");
     }
 
+    @AfterClass
+    public static void testEndMessage() {
+        System.out.println("Ending tests in PairTest Class");
+    }
+
     @Before
     public void prepareData() {
 
@@ -30,11 +35,6 @@ public class PairTest {
         e2.setId(2L);
         e2.setName("Entity 2");
         e2.setDoNotCopy("Don't call it Filet");
-    }
-
-    @AfterClass
-    public static void testEndMessage() {
-        System.out.println("Ending tests in PairTest Class");
     }
 
     @Test

@@ -1,4 +1,4 @@
 package de.pp.copyhelper;
 
-public class OtherEntityImpl implements OtherEntity{
+public class OtherEntityImpl implements OtherEntity {
 }

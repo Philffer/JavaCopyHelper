@@ -6,18 +6,18 @@ package de.pp.copyhelper;
  */
 public interface Entity {
 
-    void setName(String name);
-
     String getName();
 
-    void setId(Long id);
+    void setName(String name);
 
     Long getId();
 
-    void setDoNotCopy(String doNotCopy);
+    void setId(Long id);
 
     @NoCopy
     String getDoNotCopy();
+
+    void setDoNotCopy(String doNotCopy);
 
     String getDisplayValue();
 

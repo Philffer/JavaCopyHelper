@@ -4,7 +4,7 @@ package de.pp.copyhelper;
  * @author Philipp Pfeiffer
  * Implementation of the {@link EntityChild} Interface
  */
-public class EntityChildImpl extends EntityImpl implements EntityChild{
+public class EntityChildImpl extends EntityImpl implements EntityChild {
 
     private String childSpecific;
 

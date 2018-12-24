@@ -1,10 +1,9 @@
 package de.pp.copyhelper;
 
 /**
- * @author Philipp Pfeiffer
  * @param <T>
- * @param <U>
- * Representing a Pair of two Objects.
+ * @param <U> Representing a Pair of two Objects.
+ * @author Philipp Pfeiffer
  */
 public class Pair<T, U> {
 

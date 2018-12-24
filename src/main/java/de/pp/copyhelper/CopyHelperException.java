@@ -1,8 +1,9 @@
 package de.pp.copyhelper;
 
-public class CopyHelperException extends Exception{
+public class CopyHelperException extends Exception {
 
-    public CopyHelperException() {}
+    public CopyHelperException() {
+    }
 
     public CopyHelperException(String message) {
         super(message);
