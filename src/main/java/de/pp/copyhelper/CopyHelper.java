@@ -14,6 +14,14 @@ import java.util.stream.Collectors;
  */
 public class CopyHelper {
 
+
+    /**
+     * Private Constructor to prevent initialisation
+     */
+    private CopyHelper() {
+
+    }
+
     /**
      * @param sourceClass The class (Class or Interface) of the sourceClass
      * @param destinationClass The class (Class or Interface) of the destinationClass
