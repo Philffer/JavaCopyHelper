@@ -30,4 +30,17 @@ public class Pair<T, U> {
                 && ((Pair<T, U>) o).getSecond().equals(this.getSecond());
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 321;
+        hash = 41 * hash + (firstElement == null ? 0 : firstElement.toString().hashCode());
+        hash = 41 * hash + (secondElement == null ? 0 : secondElement.toString().hashCode());
+        return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "First Element: " + firstElement.toString() + " | Second Element: " + secondElement.toString();
+    }
+
 }
